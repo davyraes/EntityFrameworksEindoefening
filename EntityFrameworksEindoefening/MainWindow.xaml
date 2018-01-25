@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:EntityFrameworksEindoefening"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <ListBox Name="List_Landen" DisplayMemberPath="Naam" DockPanel.Dock="Top" Margin="5" Height="150" SelectionChanged="List_Landen_SelectionChanged"/>
+        <StackPanel DockPanel.Dock="Bottom" Margin="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox Name="Textbox_Stad" MinWidth="250" Margin="5"></TextBox>
+            <Button Name="Button_bijvoegen" Content="Bijvoegen" Margin="5" Click="Button_bijvoegen_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="auto">
+            <ListBox Name="List_Steden" DisplayMemberPath="Naam" MinWidth="250"></ListBox>
+            <ListBox Name="List_Talen" DisplayMemberPath="Naam" MinWidth="250"></ListBox>
+        </StackPanel>
+
+    </DockPanel>
 </Window>
